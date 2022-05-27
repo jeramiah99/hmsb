@@ -14,6 +14,9 @@ app.use(bodyparser.urlencoded({extended: true}))
 
 app.use(cors()) 
 
+app.get('/', (req, res) => res.send("HELLO"))
+app.get('/test', (req, res) => res.send("TESTING "))
+
 
 app.listen(3001, () => {
     console.log("Server is listening at port 3001");

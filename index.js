@@ -7,6 +7,8 @@ require('dotenv').config();
 const cors=require("cors");
 const bodyparser = require("body-parser")
 
+const PORT = process.env.PORT || 5000;
+
 const cool = require('cool-ascii-faces');
 
 //parse JSON using express
@@ -20,6 +22,6 @@ app.get('/', (req, res) => res.send(cool()))
 app.get('/cool', (req, res) => res.send(cool()))
 
 
-app.listen(3001, () => {
+app.listen(PORT, () => {
     console.log("Server is listening at port 3001");
 });
